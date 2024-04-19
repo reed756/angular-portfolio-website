@@ -2,11 +2,12 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../_models/Project';
 import { ProjectsService } from '../_services/projects.service';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -13,52 +13,52 @@ export class ProjectsService {
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
     {
-      id: 0,
+      id: 1,
       name: 'Sample Application One',
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
     {
-      id: 0,
+      id: 2,
       name: 'Sample Application One',
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
     {
-      id: 0,
+      id: 3,
       name: 'Sample Application One',
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
     {
-      id: 0,
+      id: 2,
       name: 'Sample Application One',
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
     {
-      id: 0,
+      id: 4,
       name: 'Sample Application One',
       summary: 'Test Description',
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
-      images: ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'],
+      images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     },
   ]
@@ -77,6 +77,23 @@ export class ProjectsService {
     }
 
     return project;
+  }
+
+  getProjectsByFilter(filterTags: Tag[]) {
+    let filteredProjects: Project[] = [];
+    this.projects.forEach(project => {
+      let foundAll = true;
+
+      filterTags.forEach(filterTag => {
+        if (project.tags.includes(filterTag) == false) {
+          foundAll = false;
+        }
+      })
+      if (foundAll) {
+        filteredProjects.push(project);
+      }
+    }
+    );
   }
 
 }
