@@ -6,7 +6,7 @@
   <carousel>
     @for (image of project.images; track $index) {
     <slide>
-      <img [src]="image" alt="slide" style="display: block; width: 100%;">
+      <img [src]="image" alt="slide" style="display: block; width: 100%; height: 60dvh; object-fit: cover;">
     </slide>
     }
   </carousel>

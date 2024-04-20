@@ -1,7 +1,7 @@
 export class Tag {
   static readonly ANGULAR = new Tag('Angular', 'red');
   static readonly TYPESCRIPT = new Tag('TypeScript', 'darkblue');
-  static readonly NODEJS = new Tag('Node.JS', 'green');
+  static readonly NODEJS = new Tag('NodeJS', 'green');
   static readonly JAVASCRIPT = new Tag('JavaScript', 'yellow');
   static readonly RXJS = new Tag('RxJS', 'purple');
   static readonly NGRX = new Tag('NgRx', 'darkpurple');

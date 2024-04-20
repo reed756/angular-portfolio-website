@@ -1,1 +1,170 @@
-<p>experience works!</p>
+<div class="container text-center">
+  <div class="btn btn-primary mb-5 shadow border" (click)="downloadPdf()">
+    Download PDF CV
+  </div>
+
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+      <accordion-group [(isOpen)]="isWorkExperienceOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">
+            Work Experience
+          </div>
+          <div style="width: 10.95px;">
+            @if (!isWorkExperienceOpen) {
+            <div style="color: white;">></div>
+            }
+            @if (isWorkExperienceOpen) {
+            <div style="color: white;">v</div>
+            }
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h2 class="mb-0">
+            Web Developer
+          </h2>
+          <h3 class="text-primary">
+            RADical Systems (UK) Limited
+          </h3>
+          <ul>
+            <li>Built a new basket whilst working on the new customer portal.</li>
+            <li>Challenges included raising knowledge of SQL so that I could work on procedures used within the
+              application. I did this by utilising PluralSight to take courses on SQL.</li>
+            <li>This allowed me to be an asset to the team more quickly as well as participate in code reviews and
+              testing.</li>
+          </ul>
+        </div>
+        <div style="text-align: left">
+          <h2 class="mb-0">
+            Junior Front End Developer
+          </h2>
+          <h3 class="text-primary">
+            UniTaskr
+          </h3>
+          <ul>
+            <li>Learned the Angular and Ionic framework to build front end pages and components during release of new
+              app
+              for ios, Android and web in the first 6 months.</li>
+            <li>Learned Firebase Functions and chart.js to build a dashboard to show login/register statistics to the
+              founders of the business.</li>
+            <li>Built the front end components for business and student subscription models to help increase revenue for
+              the task board within the app by over 100%.</li>
+          </ul>
+        </div>
+        <div style="text-align: left">
+          <h2 class="mb-0">
+            Fulltime Student
+          </h2>
+          <h3 class="text-primary">
+            Northcoders
+          </h3>
+          <ul>
+            <li>Built both a UI and an API for a news article site using JavaScript, React, Node.js and Express.</li>
+            <li>Learnt React Native and TypeScript to collaborate on a mobile app for a group project.</li>
+            <li>Best practices taught throughout, including version control with git, TDD and pair programming.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isEducationOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">
+            Experience
+          </div>
+          <div style="width: 10.95px;">
+            @if (!isEducationOpen) {
+            <div style="color: white;">></div>
+            }
+            @if (isEducationOpen) {
+            <div style="color: white;">v</div>
+            }
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h2 class="mb-0">
+            Bachelor of Arts in Creative Writing
+          </h2>
+          <h3 class="text-primary">
+            University of Roehampton
+          </h3>
+          <ul>
+            <li>Graduated from the University of Roehampton in 2016.</li>
+            <li>Graduated with a 2:1.</li>
+            <li>Participated in extracurricular clubs such as pool club, ski club, and the fresh magazine team.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isCertificationsOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">
+            Certifications
+          </div>
+          <div style="width: 10.95px;">
+            @if (!isCertificationsOpen) {
+            <div style="color: white;">></div>
+            }
+            @if (isCertificationsOpen) {
+            <div style="color: white;">v</div>
+            }
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h2>
+            Software Engineering Bootcamp
+          </h2>
+          <h3 class="mb-0">
+            Northcoders
+          </h3>
+          <ul>
+            <li>Obtained March 2022</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isSkillsOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">
+            Skills
+          </div>
+          <div style="width: 10.95px;">
+            @if (!isSkillsOpen) {
+            <div style="color: white;">></div>
+            }
+            @if (isSkillsOpen) {
+            <div style="color: white;">v</div>
+            }
+          </div>
+        </button>
+        <div class="row" style="text-align: left;">
+          <div class="col">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Angular</li>
+              <li>NodeJS</li>
+              <li>Express</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Other skills</h3>
+            <ul>
+              <li>Source control with Git</li>
+              <li>Agile Development</li>
+              <li>RxJS</li>
+              <li>NgRx</li>
+            </ul>
+          </div>
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+
+</div>

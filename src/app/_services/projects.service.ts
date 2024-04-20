@@ -23,7 +23,7 @@ export class ProjectsService {
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
       images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
+      tags: [Tag.NODEJS, Tag.TYPESCRIPT]
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export class ProjectsService {
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
       images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
+      tags: [Tag.ANGULAR, Tag.JAVASCRIPT]
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ export class ProjectsService {
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
       images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
+      tags: [Tag.RXJS, Tag.TYPESCRIPT]
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ export class ProjectsService {
       description: 'Test Description',
       projectLink: 'XXXXXXXXXXXXXXXXXXXXXX',
       images: ['../../assets/card-profile.png', '../../assets/nc-logo.jpeg', '../../assets/primate.png'],
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
+      tags: [Tag.ANGULAR, Tag.NGRX]
     },
   ]
 
@@ -92,8 +92,7 @@ export class ProjectsService {
       if (foundAll) {
         filteredProjects.push(project);
       }
-    }
-    );
+    });
+    return filteredProjects;
   }
-
 }

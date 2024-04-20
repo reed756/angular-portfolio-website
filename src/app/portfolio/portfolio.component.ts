@@ -20,8 +20,11 @@ export class PortfolioComponent implements OnInit {
   projectService = inject(ProjectsService);
 
   typescript: boolean = false;
+  angular: boolean = false;
 
   isCollapsed: boolean = true;
+
+  filtering: boolean = false;
 
   constructor(private title: Title) {
     this.title.setTitle('James Reed - Portfolio');
@@ -33,9 +36,28 @@ export class PortfolioComponent implements OnInit {
 
   filter() {
     let filterTags: Tag[] = [];
+
     if (this.typescript) {
       filterTags.push(Tag.TYPESCRIPT);
     }
+    if (this.angular) {
+      filterTags.push(Tag.ANGULAR);
+    }
+
+    if (filterTags.length > 0) {
+      this.filtering = true;
+    } else {
+      this.filtering = false;
+    }
+
     this.projects = this.projectService.getProjectsByFilter(filterTags);
+  }
+
+  reset() {
+    this.typescript = false;
+    this.angular = false;
+    this.filtering = false;
+
+    this.projects = this.projectService.getProjects();
   }
 }
