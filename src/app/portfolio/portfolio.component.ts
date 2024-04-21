@@ -21,6 +21,14 @@ export class PortfolioComponent implements OnInit {
 
   typescript: boolean = false;
   angular: boolean = false;
+  rxjs: boolean = false;
+  jasmine: boolean = false;
+  firebase: boolean = false;
+  ionic: boolean = false;
+  react: boolean = false;
+  nodejs: boolean = false;
+  express: boolean = false;
+  javascript: boolean = false;
 
   isCollapsed: boolean = true;
 
@@ -42,6 +50,30 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.angular) {
       filterTags.push(Tag.ANGULAR);
+    }
+    if (this.rxjs) {
+      filterTags.push(Tag.RXJS);
+    }
+    if (this.jasmine) {
+      filterTags.push(Tag.JASMINE);
+    }
+    if (this.firebase) {
+      filterTags.push(Tag.FIREBASE);
+    }
+    if (this.ionic) {
+      filterTags.push(Tag.IONIC);
+    }
+    if (this.react) {
+      filterTags.push(Tag.REACT);
+    }
+    if (this.nodejs) {
+      filterTags.push(Tag.NODEJS);
+    }
+    if (this.express) {
+      filterTags.push(Tag.EXPRESS);
+    }
+    if (this.javascript) {
+      filterTags.push(Tag.JAVASCRIPT);
     }
 
     if (filterTags.length > 0) {
