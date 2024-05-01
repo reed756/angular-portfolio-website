@@ -1,10 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ProjectCardComponent } from '../project-card/project-card.component';
-import { Project } from '../_models/Project';
-import { ProjectsService } from '../_services/projects.service';
+import { ProjectCardComponent } from '../../components/project-card/project-card.component';
+import { Project } from '../../_models/Project';
+import { ProjectsService } from '../../_services/projects.service';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { Tag } from '../_models/Tag';
+import { Tag } from '../../_models/Tag';
 import { FormsModule } from '@angular/forms';
 
 @Component({

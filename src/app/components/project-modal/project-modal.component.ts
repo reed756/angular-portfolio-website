@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Project } from '../_models/Project';
+import { Project } from '../../_models/Project';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
