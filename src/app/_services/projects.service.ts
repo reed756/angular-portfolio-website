@@ -42,6 +42,15 @@ export class ProjectsService {
       projectLink: 'https://github.com/reed756/nc-news',
       images: ['../../assets/nc-news-1.png', '../../assets/nc-news-2.png', '../../assets/nc-news-3.png'],
       tags: [Tag.JAVASCRIPT, Tag.EXPRESS, Tag.NODEJS, Tag.REACT]
+    },
+    {
+      id: 4,
+      name: 'Portfolio Website',
+      summary: 'My personal portfolio website',
+      description: 'Portfolio website built using TypeScript, Angular 17 and ngx-bootstrap then hosted on Netlify',
+      projectLink: 'https://github.com/reed756/angular-portfolio-website',
+      images: ['../../assets/portfolio-1.png', '../../assets/portfolio-2.png', '../../assets/portfolio-3.png'],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT]
     }
   ]
 
