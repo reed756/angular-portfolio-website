@@ -26,8 +26,6 @@ export const routes: Routes = [
     data: { num: 4 }
   },
   {
-    path: '**',
-    component: HomeComponent,
-    pathMatch: 'full'
+    path: '**', redirectTo: 'home'
   }
 ];
