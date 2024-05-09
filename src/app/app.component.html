@@ -2,4 +2,6 @@
   <app-header></app-header>
   <app-nav></app-nav>
 </div>
-<router-outlet></router-outlet>
+<div [@routerAnimation]="getRouteAnimation(router)">
+  <router-outlet #router="outlet"></router-outlet>
+</div>
