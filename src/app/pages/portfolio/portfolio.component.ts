@@ -42,39 +42,9 @@ export class PortfolioComponent implements OnInit {
     this.projects = this.projectService.getProjects();
   }
 
-  filter() {
+  filter(tag: keyof typeof Tag | string) {
     let filterTags: Tag[] = [];
-
-    if (this.typescript) {
-      filterTags.push(Tag.TYPESCRIPT);
-    }
-    if (this.angular) {
-      filterTags.push(Tag.ANGULAR);
-    }
-    if (this.rxjs) {
-      filterTags.push(Tag.RXJS);
-    }
-    if (this.jasmine) {
-      filterTags.push(Tag.JASMINE);
-    }
-    if (this.firebase) {
-      filterTags.push(Tag.FIREBASE);
-    }
-    if (this.ionic) {
-      filterTags.push(Tag.IONIC);
-    }
-    if (this.react) {
-      filterTags.push(Tag.REACT);
-    }
-    if (this.nodejs) {
-      filterTags.push(Tag.NODEJS);
-    }
-    if (this.express) {
-      filterTags.push(Tag.EXPRESS);
-    }
-    if (this.javascript) {
-      filterTags.push(Tag.JAVASCRIPT);
-    }
+    filterTags.push((Tag as any)[tag]);
 
     if (filterTags.length > 0) {
       this.filtering = true;
@@ -86,10 +56,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   reset() {
-    this.typescript = false;
-    this.angular = false;
     this.filtering = false;
-
     this.projects = this.projectService.getProjects();
   }
 }
