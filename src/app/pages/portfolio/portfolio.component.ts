@@ -19,16 +19,19 @@ export class PortfolioComponent implements OnInit {
   projects = [] as Project[];
   projectService = inject(ProjectsService);
 
-  typescript: boolean = false;
-  angular: boolean = false;
-  rxjs: boolean = false;
-  jasmine: boolean = false;
-  firebase: boolean = false;
-  ionic: boolean = false;
-  react: boolean = false;
-  nodejs: boolean = false;
-  express: boolean = false;
-  javascript: boolean = false;
+  skills: { [index: string]: boolean } = {
+    typescript: false,
+    angular: false,
+    rxjs: false,
+    jasmine: false,
+    firebase: false,
+    ionic: false,
+    react: false,
+    nodejs: false,
+    express: false,
+    javascript: false
+  }
+
 
   isCollapsed: boolean = true;
 
@@ -57,6 +60,9 @@ export class PortfolioComponent implements OnInit {
 
   reset() {
     this.filtering = false;
+    Object.keys(this.skills).forEach((v: keyof { [index: string]: boolean }) => {
+      this.skills[v] = false;
+    })
     this.projects = this.projectService.getProjects();
   }
 }
