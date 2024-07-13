@@ -59,10 +59,10 @@ export class PortfolioComponent implements OnInit {
   }
 
   reset() {
-    this.filtering = false;
     Object.keys(this.skills).forEach((v: keyof { [index: string]: boolean }) => {
       this.skills[v] = false;
     })
+    this.filtering = false;
     this.projects = this.projectService.getProjects();
   }
 }
