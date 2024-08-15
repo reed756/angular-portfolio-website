@@ -25,8 +25,8 @@ export class ExperienceComponent {
   downloadPdf() {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', '../../assets/james-reed-cv.pdf');
-    link.setAttribute('download', 'Cv.pdf');
+    link.setAttribute('href', '../../assets/Front End Developer - James Reed.pdf');
+    link.setAttribute('download', 'Front End Developer - James Reed.pdf');
     link.click();
     link.remove();
   }
