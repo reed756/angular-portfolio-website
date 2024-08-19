@@ -10,6 +10,7 @@ export class Tag {
   static readonly IONIC = new Tag('Ionic', 'grey');
   static readonly FIREBASE = new Tag('Firebase', 'orange');
   static readonly REACT = new Tag('React', 'lightblue');
+  static readonly MATERIAL = new Tag('Angular Material', 'cyan');
 
   private constructor(private readonly key: string, public readonly color: string) {
 

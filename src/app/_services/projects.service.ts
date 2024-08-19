@@ -9,15 +9,24 @@ export class ProjectsService {
   projects: Project[] = [
     {
       id: 0,
+      name: 'Movie Explorer App',
+      summary: 'Movie Finder Application that lets you scroll through different movie lists, search for a particular movie and also see further details about a movie.',
+      description: 'Movie Finder Application that lets you scroll through different movie lists, search for a particular movie and also see further details about a movie. Built using TypeScript, Angular, Angular Material and RxJS. Also uses The Movie Database API for Movie data.',
+      projectLink: 'https://github.com/reed756/movie-explorer',
+      images: ['../../assets/movie-explorer-1.png', '../../assets/movie-explorer-2.png', '../../assets/movie-explorer-3.png'],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.MATERIAL, Tag.RXJS]
+    },
+    {
+      id: 1,
       name: 'Weather App',
       summary: 'Weather Application that lets users search for weather in a location and add them to their favourites.',
-      description: 'Weather Application that lets users search for weather in a location and add them to their favourites. built using TypeScript, Angular, Tailwind.css, Preline UI and RxJS. Also makes use of unit testing with Karma and the Jasmine framework. Uses OpenWeatherMap API for weather data.',
+      description: 'Weather Application that lets users search for weather in a location and add them to their favourites. Built using TypeScript, Angular, Tailwind.css, Preline UI and RxJS. Also makes use of unit testing with Karma and the Jasmine framework. Uses OpenWeatherMap API for weather data.',
       projectLink: 'https://github.com/reed756/weather-dashboard',
       images: ['../../assets/weather-app-1.png', '../../assets/weather-app-2.png', '../../assets/weather-app-3.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.RXJS, Tag.JASMINE]
     },
     {
-      id: 1,
+      id: 2,
       name: 'Currency Converter',
       summary: 'Currency converter application that lets users convert one currency to another.',
       description: 'Currency converter application that lets users convert one currency to another. Application built using TypeScript, Angular, Ionic and RxJS. Uses fixer API on for up to date currency rates and also uses Karma and Jasmine Framework for unit tests.',
@@ -26,7 +35,7 @@ export class ProjectsService {
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.IONIC, Tag.RXJS, Tag.JASMINE]
     },
     {
-      id: 2,
+      id: 3,
       name: 'Primate',
       summary: 'Mobile Application that lets users find their favourite primates.',
       description: 'This is a Demo Mobile app that helps nature enthusiasts find primates. Built using Ionic, Angular, TypeScript and Capacitor. Utilises mapbox.gl api for the home map screen and also Firebase for both authorisation and authentication.',
@@ -35,7 +44,7 @@ export class ProjectsService {
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.FIREBASE, Tag.IONIC]
     },
     {
-      id: 3,
+      id: 4,
       name: 'NC News',
       summary: 'News article site like reddit',
       description: 'News article site built using JavaScript, Node.js, React.js, Express.js and PostgreSQL. Also followed TDD principles and used Jest for testing both frontend and backend. Front End UI hosted on Netlify and Backend API hosted on Render.',
@@ -44,7 +53,7 @@ export class ProjectsService {
       tags: [Tag.JAVASCRIPT, Tag.EXPRESS, Tag.NODEJS, Tag.REACT]
     },
     {
-      id: 4,
+      id: 5,
       name: 'Portfolio Website',
       summary: 'My personal portfolio website',
       description: 'Portfolio website built using TypeScript, Angular 17 and ngx-bootstrap then hosted on Netlify',
