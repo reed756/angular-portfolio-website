@@ -5,10 +5,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-    selector: 'app-contact',
-    imports: [FontAwesomeModule],
-    templateUrl: './contact.component.html',
-    styleUrl: './contact.component.scss'
+  selector: 'app-contact',
+  imports: [FontAwesomeModule],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
+  standalone: true,
 })
 export class ContactComponent {
   faGithub = faGithub;

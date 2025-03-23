@@ -7,7 +7,8 @@ import { faHashnode } from '@fortawesome/free-brands-svg-icons';
   selector: 'app-header',
   imports: [FontAwesomeModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  standalone: true,
 })
 export class HeaderComponent {
   faGithub = faGithub;

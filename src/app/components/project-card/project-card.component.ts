@@ -4,11 +4,12 @@ import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from '../project-modal/project-modal.component';
 
 @Component({
-    selector: 'app-project-card',
-    imports: [],
-    templateUrl: './project-card.component.html',
-    styleUrl: './project-card.component.scss',
-    providers: [BsModalService]
+  selector: 'app-project-card',
+  imports: [],
+  templateUrl: './project-card.component.html',
+  styleUrl: './project-card.component.scss',
+  providers: [BsModalService],
+  standalone: true,
 })
 export class ProjectCardComponent {
   @Input() project = {} as Project;

@@ -3,10 +3,11 @@ import { Title } from '@angular/platform-browser';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @Component({
-    selector: 'app-experience',
-    imports: [AccordionModule],
-    templateUrl: './experience.component.html',
-    styleUrl: './experience.component.scss'
+  selector: 'app-experience',
+  imports: [AccordionModule],
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss',
+  standalone: true,
 })
 export class ExperienceComponent {
 
