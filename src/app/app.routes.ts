@@ -5,6 +5,7 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full', data: { num: 1 } }, // redirect to `home` page
   {
     path: 'home',
     component: HomeComponent,
