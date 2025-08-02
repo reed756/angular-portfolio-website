@@ -8,11 +8,10 @@ import { Tag } from '../../_models/Tag';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-portfolio',
-  imports: [ProjectCardComponent, CollapseModule, FormsModule],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss',
-  standalone: true,
+    selector: 'app-portfolio',
+    imports: [ProjectCardComponent, CollapseModule, FormsModule],
+    templateUrl: './portfolio.component.html',
+    styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent implements OnInit {
 

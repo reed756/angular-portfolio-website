@@ -4,11 +4,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faHashnode } from '@fortawesome/free-brands-svg-icons';
 @Component({
-  selector: 'app-header',
-  imports: [FontAwesomeModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-  standalone: true,
+    selector: 'app-header',
+    imports: [FontAwesomeModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   faGithub = faGithub;

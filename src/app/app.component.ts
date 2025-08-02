@@ -6,12 +6,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { routerAnimation } from './animations';
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, TooltipModule, HeaderComponent, NavComponent, ModalModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  animations: [routerAnimation()],
-  standalone: true,
+    selector: 'app-root',
+    imports: [RouterOutlet, TooltipModule, HeaderComponent, NavComponent, ModalModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    animations: [routerAnimation()]
 })
 export class AppComponent {
   title = 'angular-portfolio-website';
