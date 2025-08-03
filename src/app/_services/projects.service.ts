@@ -20,7 +20,7 @@ export class ProjectsService {
       id: 1,
       name: 'Portfolio Website',
       summary: 'My personal portfolio website',
-      description: 'Portfolio website built using TypeScript, Angular 17 and ngx-bootstrap then hosted on Netlify',
+      description: 'Portfolio website built using TypeScript, Angular and ngx-bootstrap then hosted on Netlify',
       projectLink: 'https://github.com/reed756/angular-portfolio-website',
       images: ['../../assets/portfolio-1.png', '../../assets/portfolio-2.png', '../../assets/portfolio-3.png'],
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.JAVASCRIPT]
