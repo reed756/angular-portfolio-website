@@ -3,28 +3,32 @@ import { Title } from '@angular/platform-browser';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @Component({
-    selector: 'app-experience',
-    imports: [AccordionModule],
-    templateUrl: './experience.component.html',
-    styleUrl: './experience.component.scss'
+  selector: 'app-experience',
+  imports: [AccordionModule],
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
+  private readonly title = inject(Title);
 
-  renderer = inject(Renderer2)
+  renderer = inject(Renderer2);
 
-  isWorkExperienceOpen: boolean = false;
-  isEducationOpen: boolean = false;
-  isCertificationsOpen: boolean = false;
-  isSkillsOpen: boolean = false;
+  isWorkExperienceOpen = false;
+  isEducationOpen = false;
+  isCertificationsOpen = false;
+  isSkillsOpen = false;
 
-  constructor(private title: Title) {
+  constructor() {
     this.title.setTitle('James Reed - Experience');
   }
 
   downloadPdf() {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', '../../assets/Front End Developer - James Reed.pdf');
+    link.setAttribute(
+      'href',
+      '../../assets/Front End Developer - James Reed.pdf',
+    );
     link.setAttribute('download', 'Front End Developer - James Reed.pdf');
     link.click();
     link.remove();

@@ -1,105 +1,157 @@
+<!-- eslint-disable @angular-eslint/template/label-has-associated-control -->
 <div class="container">
   <div class="mb-2">
     <div>
-      <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">
+      <button
+        class="btn btn-outline-primary me-2 mb-2"
+        (click)="isCollapsed = !isCollapsed"
+      >
         Filter
       </button>
-      <button class="btn btn-outline-secondary mb-2" (click)="isCollapsed = !isCollapsed" (click)="reset()"
-        [hidden]="!filtering">
+      <button
+        class="btn btn-outline-secondary mb-2"
+        (click)="isCollapsed = !isCollapsed"
+        (click)="reset()"
+        [hidden]="!filtering"
+      >
         Reset
       </button>
     </div>
     <div [collapse]="isCollapsed" [isAnimated]="true">
-      <div class="border mb-2 shadow-sm" style="width: 250px;">
+      <div class="mb-2 border shadow-sm" style="width: 250px">
         <form>
           <div class="row mx-0">
             <div class="col">
               <small>
-                <b>
-                  Languages:
-                </b>
+                <b> Languages: </b>
               </small>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2"
-                    [(ngModel)]="skills['typescript']" (change)="filter('TYPESCRIPT')" name="Typescript">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['typescript']"
+                    (change)="filter('TYPESCRIPT')"
+                    name="Typescript"
+                  />
                   <label class="form-check-label small">TypeScript</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2"
-                    [(ngModel)]="skills['javascript']" (change)="filter('JAVASCRIPT')" name="JavaScript">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['javascript']"
+                    (change)="filter('JAVASCRIPT')"
+                    name="JavaScript"
+                  />
                   <label class="form-check-label small">JavaScript</label>
                 </div>
               </div>
             </div>
             <div class="col">
               <small>
-                <b>
-                  Frameworks:
-                </b>
+                <b> Frameworks: </b>
               </small>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['angular']"
-                    (change)="filter('ANGULAR')" name="Angular">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['angular']"
+                    (change)="filter('ANGULAR')"
+                    name="Angular"
+                  />
                   <label class="form-check-label small">Angular</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['nodejs']"
-                    (change)="filter('NODEJS')" name="NodeJS">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['nodejs']"
+                    (change)="filter('NODEJS')"
+                    name="NodeJS"
+                  />
                   <label class="form-check-label small">NodeJS</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['express']"
-                    (change)="filter('EXPRESS')" name="Express">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['express']"
+                    (change)="filter('EXPRESS')"
+                    name="Express"
+                  />
                   <label class="form-check-label small">Express</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['react']"
-                    (change)="filter('REACT')" name="React">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['react']"
+                    (change)="filter('REACT')"
+                    name="React"
+                  />
                   <label class="form-check-label small">React</label>
                 </div>
               </div>
             </div>
             <div class="col">
               <small>
-                <b>
-                  Other:
-                </b>
+                <b> Other: </b>
               </small>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['rxjs']"
-                    (change)="filter('RXJS')" name="rxjs">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['rxjs']"
+                    (change)="filter('RXJS')"
+                    name="rxjs"
+                  />
                   <label class="form-check-label small">RxJS</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['jasmine']"
-                    (change)="filter('JASMINE')" name="jasmine">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['jasmine']"
+                    (change)="filter('JASMINE')"
+                    name="jasmine"
+                  />
                   <label class="form-check-label small">Jasmine</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['firebase']"
-                    (change)="filter('FIREBASE')" name="firebase">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['firebase']"
+                    (change)="filter('FIREBASE')"
+                    name="firebase"
+                  />
                   <label class="form-check-label small">Firebase</label>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="skills['ionic']"
-                    (change)="filter('IONIC')" name="ionic">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="skills['ionic']"
+                    (change)="filter('IONIC')"
+                    name="ionic"
+                  />
                   <label class="form-check-label small">Ionic</label>
                 </div>
               </div>
@@ -111,11 +163,12 @@
   </div>
   <div class="row">
     @for (project of projects; track $index) {
-    <div class="col-lg-4 col-md-6 mb-4" style="max-width: 380px; min-width: 380px;">
-      <app-project-card [project]="project">
-
-      </app-project-card>
-    </div>
+      <div
+        class="col-lg-4 col-md-6 mb-4"
+        style="max-width: 380px; min-width: 380px"
+      >
+        <app-project-card [project]="project"> </app-project-card>
+      </div>
     }
   </div>
 </div>
