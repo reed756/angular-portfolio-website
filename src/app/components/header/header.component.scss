@@ -1,8 +1,59 @@
-.jumbotron {
-  padding: 2em 1em;
-  background-color: lightgrey;
+@property --color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #000;
 }
 
-fa-icon {
-  font-size: 2rem;
+@property --color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #000;
+}
+
+@keyframes color-change {
+  to {
+    --color-1: var(--_color-1-to);
+    --color-2: var(--_color-2-to);
+  }
+}
+
+.gradient-text {
+  --_space: ;
+
+  /* light mode */
+  --_color-1-from: yellow;
+  --_color-1-to: orange;
+  --_color-2-from: purple;
+  --_color-2-to: hotpink;
+
+  /* dark mode */
+  @media (prefers-color-scheme: dark) {
+    --_color-1-from: lime;
+    --_color-1-to: cyan;
+    --_color-2-from: cyan;
+    --_color-2-to: deeppink;
+  }
+
+  --color-1: var(--_color-1-from);
+  --color-2: var(--_color-2-from);
+
+  animation: color-change 2s linear infinite alternate;
+
+  background: linear-gradient(
+    to right var(--_space),
+    var(--color-1),
+    var(--color-2)
+  );
+
+  /* old browser support */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* modern browser version */
+  background-clip: text;
+  color: transparent;
+
+  @supports (background: linear-gradient(in oklch, #fff, #fff)) {
+    --_space: in oklch;
+  }
 }
