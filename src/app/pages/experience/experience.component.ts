@@ -27,9 +27,9 @@ export class ExperienceComponent {
     link.setAttribute('target', '_blank');
     link.setAttribute(
       'href',
-      '../../assets/Front End Developer - James Reed.pdf',
+      '../../assets/James Reed - Angular Developer.pdf',
     );
-    link.setAttribute('download', 'Front End Developer - James Reed.pdf');
+    link.setAttribute('download', 'James Reed - Angular Developer.pdf');
     link.click();
     link.remove();
   }
