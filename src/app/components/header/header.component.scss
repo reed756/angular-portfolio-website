@@ -57,3 +57,11 @@
     --_space: in oklch;
   }
 }
+
+.icon-text {
+  color: orange;
+
+  @media (prefers-color-scheme: dark) {
+    color: cyan;
+  }
+}
