@@ -1,0 +1,31 @@
+<app-section [sectionName]="'hero'">
+  <div class="hero bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <img
+        src="../../assets/card-profile.png"
+        alt="Profile Picture"
+        class="max-w-sm rounded-lg shadow-2xl"
+      />
+      <div>
+        <h1 class="text-5xl font-bold">Full Stack Developer</h1>
+        <h2 class="text-2xl font-semibold">
+          Angular • TypeScript • RxJS • Node.js • JavaScript
+        </h2>
+        <p class="py-6">
+          I am a Full Stack Developer specialising in Angular, TypeScript, RxJS,
+          Node.js and JavaScript. My current interests lie in UX and how it
+          makes the user feel. I have over 3 years of experience in the industry
+          and I have built applications for the self storage and freelancing
+          industries.
+        </p>
+        <div class="flex gap-4">
+          <button class="btn btn-primary" (click)="goToProjects()">
+            View Projects
+          </button>
+          <button class="btn btn-primary" (click)="goToGithub()">Github</button>
+          <button class="btn btn-primary" (click)="downloadPdf()">CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-section>

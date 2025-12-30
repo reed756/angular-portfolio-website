@@ -7,7 +7,7 @@ import { faHashnode } from '@fortawesome/free-brands-svg-icons';
   selector: 'app-header',
   imports: [FontAwesomeModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {

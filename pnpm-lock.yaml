@@ -92,6 +92,9 @@ importers:
       angular-eslint:
         specifier: 20.1.1
         version: 20.1.1(chokidar@4.0.3)(eslint@9.33.0(jiti@2.6.1))(typescript-eslint@8.39.0(eslint@9.33.0(jiti@2.6.1))(typescript@5.9.3))(typescript@5.9.3)
+      daisyui:
+        specifier: ^5.5.14
+        version: 5.5.14
       eslint:
         specifier: ^9.29.0
         version: 9.33.0(jiti@2.6.1)
@@ -4259,6 +4262,12 @@ packages:
     resolution:
       {
         integrity: sha512-GAj5FOq0Hd+RsCGVJxZuKaIDXDf3h6GQoNEjFgbLLI/trgtavwUbSnZ5pVfg27DVCaWjIohryS0JFwIJyT2cMg==,
+      }
+
+  daisyui@5.5.14:
+    resolution:
+      {
+        integrity: sha512-L47rvw7I7hK68TA97VB8Ee0woHew+/ohR6Lx6Ah/krfISOqcG4My7poNpX5Mo5/ytMxiR40fEaz6njzDi7cuSg==,
       }
 
   data-urls@6.0.0:
@@ -11393,6 +11402,8 @@ snapshots:
 
   custom-event@1.0.1:
     optional: true
+
+  daisyui@5.5.14: {}
 
   data-urls@6.0.0:
     dependencies:

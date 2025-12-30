@@ -4,13 +4,25 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { routerAnimation } from './animations';
+import { HeroComponent } from './sections/hero/hero.component';
+import { NavBarComponent } from './sections/nav-bar/nav-bar.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
+import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 @Component({
-    selector: 'app-root',
-    imports: [RouterOutlet, TooltipModule, HeaderComponent, NavComponent, ModalModule],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    animations: [routerAnimation()]
+  selector: 'app-root',
+  imports: [
+    RouterOutlet,
+    TooltipModule,
+    HeaderComponent,
+    NavComponent,
+    ModalModule,
+    HeroComponent,
+    NavBarComponent,
+    ProjectsComponent,
+    TechStackComponent,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'angular-portfolio-website';

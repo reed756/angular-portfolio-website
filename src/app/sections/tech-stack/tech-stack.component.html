@@ -1,0 +1,22 @@
+<app-section [sectionName]="'skills'">
+  <h2 class="mb-6 text-left text-4xl font-bold">Tech Stack</h2>
+  <div class="mx-auto max-w-6xl">
+    <div class="flex flex-wrap gap-2">
+      @for (category of techCategories(); track $index) {
+        <div class="card bg-base-100 card-md w-full shadow-sm md:w-10/34">
+          <div class="card-body">
+            <h2 class="card-title">{{ category | titlecase }}</h2>
+            <div class="card-actions justify-end">
+              @for (tech of techStack()[category]; track tech) {
+                <div class="badge">{{ tech }}</div>
+              }
+            </div>
+          </div>
+        </div>
+        @if ($index < techCategories().length - 1) {
+          <div class="divider md:divider-horizontal"></div>
+        }
+      }
+    </div>
+  </div>
+</app-section>

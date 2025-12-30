@@ -8,7 +8,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
   selector: 'app-contact',
   imports: [FontAwesomeModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrl: './contact.component.css',
 })
 export class ContactComponent {
   private readonly title = inject(Title);

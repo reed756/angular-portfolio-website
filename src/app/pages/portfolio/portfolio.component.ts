@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-portfolio',
   imports: [ProjectCardComponent, CollapseModule, FormsModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss',
+  styleUrl: './portfolio.component.css',
 })
 export class PortfolioComponent implements OnInit {
   private readonly title = inject(Title);

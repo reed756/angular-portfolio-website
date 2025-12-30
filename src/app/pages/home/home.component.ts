@@ -2,13 +2,12 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../../_models/Project';
 import { ProjectsService } from '../../_services/projects.service';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule],
+  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
   private readonly title = inject(Title);
@@ -22,5 +21,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.featuredProject = this.projectsService.getProjectById(0);
+  }
+
+  scrollTo(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

@@ -6,7 +6,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
   selector: 'app-experience',
   imports: [AccordionModule],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss',
+  styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
   private readonly title = inject(Title);
