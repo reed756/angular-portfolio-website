@@ -1,0 +1,30 @@
+<app-section [sectionName]="'experience'">
+  <h2 class="mb-6 text-left text-4xl font-bold">Experience</h2>
+  <div class="mx-auto flex max-w-6xl flex-col gap-6">
+    @for (experience of experiences(); track experience.title) {
+      <div class="card bg-base-100 card-lg w-full shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title">{{ experience.timeFrame }}</h2>
+          <h3>
+            {{
+              `${experience.company}, ${experience.location} - ${experience.title}`
+            }}
+          </h3>
+          @for (duty of experience.roleDescription ?? []; track duty) {
+            <p>- {{ duty }}</p>
+          }
+          @if (experience.techUsed) {
+            <div class="mt-4 flex flex-wrap gap-2">
+              @for (tech of experience.techUsed; track tech) {
+                <div class="badge badge-outline">{{ tech }}</div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      @if (experience !== experiences()[experiences().length - 1]) {
+        <div class="divider"></div>
+      }
+    }
+  </div>
+</app-section>
