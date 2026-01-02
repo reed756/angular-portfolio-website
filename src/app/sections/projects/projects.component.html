@@ -1,0 +1,42 @@
+<app-section [sectionName]="'projects'">
+  <h2 class="mb-6 text-left text-4xl font-bold">Projects</h2>
+  <div class="mx-auto max-w-6xl">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      @for (project of projects(); track project.id) {
+        <div class="card bg-base-100 shadow-sm">
+          <figure>
+            <div class="mockup-browser border-base-300 w-full border">
+              <div class="mockup-browser-toolbar">
+                <div class="input">{{ project.liveLink }}</div>
+              </div>
+              <div
+                class="border-base-300 grid h-80 place-content-center border-t"
+              >
+                <img [src]="project.images[0]" [alt]="project.name" />
+              </div>
+            </div>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              {{ project.name }}
+            </h2>
+            <p>{{ project.description }}</p>
+            <div class="flex flex-wrap gap-2">
+              @for (tag of project.tags; track tag) {
+                <div class="badge badge-outline">{{ tag }}</div>
+              }
+            </div>
+            <div class="card-actions justify-end">
+              <a [href]="project.projectLink" target="_blank" rel="noopener">
+                <button class="btn btn-primary">Code</button>
+              </a>
+              <a [href]="project.liveLink" target="_blank" rel="noopener">
+                <button class="btn btn-accent">Live</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</app-section>

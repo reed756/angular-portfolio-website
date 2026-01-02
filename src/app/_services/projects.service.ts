@@ -15,6 +15,7 @@ export class ProjectsService {
       description:
         "Movie Finder Application that lets you scroll through different movie lists, search for a particular movie and also see further details about a movie. Built using TypeScript, Angular, Angular Material, RxJS, Jasmine and Vitest on the frontend. Has a Node.js Express backend that uses the TMDB API for it's data",
       projectLink: 'https://github.com/reed756/movie-explorer',
+      liveLink: 'https://movie-explorer-angular.netlify.app/home',
       images: [
         '../../assets/movie-explorer-1.png',
         '../../assets/movie-explorer-2.png',
@@ -38,6 +39,7 @@ export class ProjectsService {
       description:
         'A responsive full-stack web app that uses Angular 20 on the frontend and Node.js on the backend. The app lets users learn the Greek alphabet and then test themselves on it. They can also post their score to a leaderboard.',
       projectLink: 'https://github.com/reed756/learn_greek',
+      liveLink: '',
       images: [
         '../../assets/learn-greek-1.png',
         '../../assets/learn-greek-2.png',
@@ -51,20 +53,6 @@ export class ProjectsService {
         Tag.EXPRESS,
         Tag.RXJS,
       ],
-    },
-    {
-      id: 2,
-      name: 'Portfolio Website',
-      summary: 'My personal portfolio website',
-      description:
-        'Portfolio website built using TypeScript, Angular and ngx-bootstrap then hosted on Netlify',
-      projectLink: 'https://github.com/reed756/angular-portfolio-website',
-      images: [
-        '../../assets/portfolio-1.png',
-        '../../assets/portfolio-2.png',
-        '../../assets/portfolio-3.png',
-      ],
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.JAVASCRIPT],
     },
   ];
 
