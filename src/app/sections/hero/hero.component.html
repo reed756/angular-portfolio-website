@@ -14,11 +14,18 @@
           industries.
         </p>
         <div class="flex gap-4">
-          <button class="btn btn-primary" (click)="goToProjects()">
-            View Projects
-          </button>
-          <button class="btn btn-primary" (click)="goToGithub()">Github</button>
-          <button class="btn btn-primary" (click)="downloadPdf()">CV</button>
+          <a href="#projects">
+            <button class="btn btn-accent">View Projects</button>
+          </a>
+          <a href="https://github.com/reed756" target="_blank" rel="noopener">
+            <button class="btn btn-primary">Github</button>
+          </a>
+          <a
+            href="../../../assets/James Reed - Full Stack Developer.pdf"
+            download="James Reed - Full Stack Developer.pdf"
+          >
+            <button class="btn btn-secondary">CV</button>
+          </a>
         </div>
       </div>
     </div>

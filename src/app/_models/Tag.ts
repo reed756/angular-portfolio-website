@@ -12,9 +12,10 @@ export class Tag {
   static readonly REACT = new Tag('React', 'lightblue');
   static readonly MATERIAL = new Tag('Angular Material', 'cyan');
 
-  private constructor(private readonly key: string, public readonly color: string) {
-
-  }
+  private constructor(
+    private readonly key: string,
+    public readonly color: string,
+  ) {}
 
   toString() {
     return this.key;
