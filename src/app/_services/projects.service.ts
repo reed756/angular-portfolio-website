@@ -39,7 +39,7 @@ export class ProjectsService {
       description:
         'A responsive full-stack web app that uses Angular 20 on the frontend and Node.js on the backend. The app lets users learn the Greek alphabet and then test themselves on it. They can also post their score to a leaderboard.',
       projectLink: 'https://github.com/reed756/learn_greek',
-      liveLink: '',
+      liveLink: 'https://learn-greek-language.netlify.app/',
       images: [
         '../../assets/learn-greek-1.png',
         '../../assets/learn-greek-2.png',
