@@ -1,7 +1,13 @@
 <app-nav-bar></app-nav-bar>
 <app-hero></app-hero>
 <app-projects></app-projects>
-<app-tech-stack></app-tech-stack>
-<app-experience></app-experience>
-<app-contact></app-contact>
-<app-footer></app-footer>
+@defer (on timer(500ms)) {
+  <app-tech-stack></app-tech-stack>
+  <app-experience></app-experience>
+  <app-contact></app-contact>
+  <app-footer></app-footer>
+} @placeholder {
+  <div class="flex h-32 items-center justify-center">
+    <span class="text-gray-500">Loading...</span>
+  </div>
+}
